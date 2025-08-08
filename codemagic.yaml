@@ -6,6 +6,6 @@ workflows:
       xcode: latest
     scripts:
       - name: Build app
-        script: xcodebuild -workspace Reinos-de-Aegarth.xcworkspace -scheme Reinos-de-Aegarth -configuration Release clean build
+        script: xcodebuild -workspace xcodebuild.xcworkspace -scheme xcodebuild -configuration Release clean build
     artifacts:
       - build/Release-iphoneos/*.ipa
