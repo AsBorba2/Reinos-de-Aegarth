@@ -1,0 +1,17 @@
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Build Ad-Hoc IPA for Esign"
+  lane :adhoc do
+    build_app(
+      scheme: "ReinosDeAegarth",
+      export_method: "ad-hoc",
+      export_options: {
+        provisioningProfiles: {
+          "com.suaempresa.aegarth" => "Your_AdHoc_Profile_Name"
+        }
+      }
+    )
+  end
+end
