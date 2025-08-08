@@ -1,0 +1,11 @@
+workflows:
+  ios-build:
+    name: Build iOS app
+    max_build_duration: 60
+    environment:
+      xcode: latest
+    scripts:
+      - name: Build app
+        script: xcodebuild -workspace ReinosDeAegarth -scheme ReinosDeAegarth -configuration Release clean build
+    artifacts:
+      - build/Release-iphoneos/*.ipa
